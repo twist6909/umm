@@ -1,1 +1,1 @@
-wget -O - http://www.redfin.com/WA/Seattle/123-Home-Row-12345/home/1234567 | grep "full:" | awk -F \" '{print $4}'
+wget -O - http://www.redfin.com/WA/Seattle/123-Home-Row-12345/home/1234567 | grep "full:" | awk -F \" '{print $4}' | xargs wget -
