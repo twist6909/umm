@@ -1,0 +1,4 @@
+# usage: redfin-images "http://www.redfin.com/WA/Seattle/123-Home-Row-12345/home/1234567"
+function redfin-images() {
+ wget -O - $1 | grep "full:" | awk -F \" '{print $4}' | xargs wget -
+}
